@@ -1,0 +1,524 @@
+html {line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+* {
+	box-sizing: border-box;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  max-width:100%;
+}
+
+/*================webpage standard styling ==================================*/
+
+html {
+	font-size: 62.5%;
+	font-family: 'Raleway','noto-serif', sans-serif;
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size:3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+a:visited { 
+  text-decoration: none;
+  color:black;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color:black;
+}
+
+.skip-link:focus {
+  left: 10px;
+}
+
+/*======================= top portion nav & social media styling =========================*/
+
+
+.top-border {
+  border-bottom: 1px solid black;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-nav,
+.social-media {
+  display:flex;
+}
+
+.left-nav h3,
+.social-media h3 {
+  margin: 20px 0;
+  font-weight:normal;
+}
+
+.social-media i {
+  color: black;
+}
+
+.left-nav h3:hover {
+  font-weight:bold;
+}
+
+.left-nav h3:first-child {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.left-nav h3:first-child::after {
+  content:'|';
+  margin-left: 20px
+}
+
+.social-media:last-child {
+	margin-right: 20px;
+
+}
+
+.social-media h3 {
+	margin-left:10px;
+}
+
+.social-media i:hover {
+  color:red;
+}
+
+/*============================== hackerYou title styling ================================*/
+
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/*-----------nav styling---------------*/
+.main-nav {
+	display:flex;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.main-nav ul {
+	padding: 0;
+  display:flex;
+  justify-content: row;
+  margin: 10px auto;
+}
+
+.main-nav li {
+	list-style-type: none;
+	margin: 0 10px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.main-nav li:hover {
+  font-weight:bold;
+}
+
+.hero-content {
+	margin:50px auto;
+}
+
+/*=============================== about section styling =================================*/
+
+
+/*------------- lines on title styling---------*/
+
+h2 {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+h2:before, h2:after {
+  position: absolute;
+  top: 50%;
+  overflow:hidden;
+  width: 50%;
+  height: 1px;
+  content: '\a0';
+  background-color: black; 
+}
+
+h2:before {
+  margin-left: -52%;
+}
+
+h2:after {
+  margin-left: 20px;
+}
+
+/*----------about content styling ----------*/
+
+.about-content {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.left-content,
+.mid-content,
+.right-content {
+	width: 33.33%;
+}
+
+.left-content,
+.mid-content {
+	margin-right: 1%;
+}
+
+.about-content p {
+  font-family: 'noto-serif', sans-serif;
+}
+
+.about-content {
+  line-height: 23px;
+}
+
+/*================================ gallery styling ==============================*/
+
+
+
+/*-------hover styling------------*/
+
+.first-pic,
+.second-pic,
+.third-pic,
+.fourth-pic {
+  position: relative;
+}
+
+.hover-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  position:absolute;
+  color: white;
+  top:15px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  background:rgba(255,0,0,0.7);
+  transition: .5s
+}
+
+.hover-content h3,
+.hover-content p {
+  margin: 0;
+}
+
+.hover-content h3 {
+  text-transform: uppercase;
+}
+
+.hover-content p:nth-child(even) {
+  font-style: italic;
+}
+
+.hover-content p:nth-child(even):before, .hover-content p:nth-child(even):after {
+  position: absolute;
+  top: 50%;
+  width: 10%;
+  height: 1px;
+  content: '\a0';
+  background-color: white; 
+}
+
+.hover-content p:nth-child(even):before {
+  margin-left: -40px;
+}
+
+.hover-content p:nth-child(even):after {
+  margin-left: 5px;
+}
+
+.first-pic:hover .hover-content,
+.second-pic:hover .hover-content,
+.third-pic:hover .hover-content,
+.fourth-pic:hover .hover-content {
+  opacity: 1;
+}
+
+/*------------- picture layout styling------------*/
+
+.gallery-content {
+  display:flex;
+  justify-content: space-between;
+}
+
+.left-pics,
+.mid-pics,
+.right-pics {
+width: 31.33%;
+}
+
+.gallery-content img {
+ margin-top: 5%;
+ margin-bottom: 2.5%;
+}
+
+main {
+  border-bottom: 1px solid black;
+  padding-bottom: 60px;
+}
+
+/*========================== footer styling section ==========================*/
+
+/*------------- subscribe/form styling------------*/
+
+.subscribe {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.subscribe h3,
+form input:last-child {
+  text-transform: uppercase;
+  font-weight:normal;
+}
+
+.subscribe h3 {
+  font-size: 1.5rem;
+  font-weight:bold;
+}
+
+form input:first-child {
+  font-style: italic;
+  width: 300px;
+}
+
+form input:last-child {
+  width: 150px;
+}
+
+form input:last-child:hover {
+  background-color:red;
+}
+
+form input:first-child,
+form input:last-child {
+  border-radius: 0;
+  border: 1px solid black;
+  padding: 15px 0;
+  font-family: 'raleway', sans-serif;
+  text-align: center;
+  font-size:1.3rem;
+  }
+.subscribe-text p {
+  font-size:1rem;
+}
+
+/*--------bot nav styling (took from top)----------*/
+
+.border-box .main-nav {
+  border: 0;
+}
+
+.border-box {
+  margin-top: 40px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+/*===================== copyright and social media styling==================*/
+
+.bot p {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight:bold;
+}
+
+/*=================== responsive design styling ===============================*/
+
+/*-------------- 940px----------------*/
+
+@media (max-width: 940px) {
+
+  .wrapper {
+    max-width: 740px;
+  }
+}
+
+/*----------------- 767px ---------------*/
+
+@media (max-width:767px) {
+
+  .wrapper {
+    max-width: 567px;
+  }
+  
+  .hover-content {
+    top: 8px;
+    bottom: 5px;
+  }
+
+ .hover-content p:nth-child(even):before {
+    margin-left: -20px;
+  }
+}
+
+/*--------------480px-----------------------*/
+
+@media (max-width: 480px) {
+  
+  .wrapper {
+    max-width: 420px;
+  }
+
+  .hover-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .hover-content p {
+    font-size: 1.2rem;
+  }
+
+  .hover-content {
+    top:20px;
+    bottom: 12px;
+  }
+
+  .gallery-content {
+    display:flex;
+    flex-direction: column;
+  }
+
+  .left-pics,
+  .mid-pics,
+  .right-pics {
+  width: 100%;
+  }
+
+  .hover-content p:nth-child(even):before {
+    margin-left: -45px;
+  }
+
+  .about-content {
+  display: flex;
+  flex-direction: column;
+  }
+
+  .left-content,
+  .mid-content,
+  .right-content {
+    width: 100%;
+  }
+  
+  .main-nav {
+    border-top: none;
+    border-bottom: none;
+    max-width:none;
+  }
+
+  .main-nav ul {
+    padding: 0;
+    display:flex;
+    flex-direction:column;
+    margin:auto;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .main-nav li {
+    width:100%;
+    list-style-type: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+    text-align:center;
+    padding: 20px;
+    margin:0;
+  }
+
+  .main-nav li:hover {
+    font-weight:bold;
+    background: red;
+  }
+
+  .hero-content {
+    margin:50px auto;
+  }
+
+  form input:first-child {
+    width: 200px;
+  }
+
+  form input:last-child {
+    width: 100px;
+  }
+  
+  .about-content {
+    text-align: center;
+  }
+
+  .border-box .main-nav ul {
+    margin: 0 auto;
+  }
+
+  .border-box .main-nav li:last-child {
+    border-bottom: none;
+  }
+
+  header .main-nav li:first-child {
+    border-top: 1px solid black;
+  }
+}
